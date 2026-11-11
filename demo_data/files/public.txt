@@ -1,0 +1,11 @@
+=========================================
+AI AGENT SECURITY PLATFORM - PUBLIC GUIDE
+=========================================
+Welcome to the AI Agent Security Platform demo knowledge base.
+This document contains public domain information regarding security testing standards.
+
+Key Concepts:
+- AI Security Assessments evaluate LLM systems for vulnerabilities.
+- Prompt injection tests verify that agent instructions cannot be overridden.
+- Data leakage tests verify that unauthorized users cannot access classified data.
+- Excess permission checks ensure tool calls follow strict authorization rules.

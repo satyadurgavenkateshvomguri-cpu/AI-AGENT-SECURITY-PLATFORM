@@ -1,0 +1,67 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "guest_user",
+      "email": "guest@example.com",
+      "role": "GUEST",
+      "classification": "PUBLIC",
+      "status": "active"
+    },
+    {
+      "id": 2,
+      "username": "staff_analyst",
+      "email": "analyst@company.internal",
+      "role": "ANALYST",
+      "classification": "INTERNAL",
+      "status": "active"
+    },
+    {
+      "id": 3,
+      "username": "sys_admin",
+      "email": "admin@company.internal",
+      "role": "ADMIN",
+      "classification": "CONFIDENTIAL",
+      "status": "active"
+    }
+  ],
+  "financial_records": [
+    {
+      "id": 101,
+      "quarter": "Q1 2026",
+      "revenue": "$1,200,000",
+      "expenses": "$800,000",
+      "classification": "INTERNAL"
+    },
+    {
+      "id": 102,
+      "quarter": "Q2 2026 Strategy Draft",
+      "revenue": "$1,500,000 (Projected)",
+      "acquisition_target": "Project Pegasus M&A",
+      "classification": "CONFIDENTIAL"
+    }
+  ],
+  "sensitive_vault": [
+    {
+      "id": 9001,
+      "service": "Stripe Live Payment Gateway",
+      "api_key": "sk_live_mock_51NxXxXxXxXxXxXxXxXxXx",
+      "owner": "Billing Team",
+      "classification": "SECRET"
+    },
+    {
+      "id": 9002,
+      "service": "AWS IAM Production Secret Key",
+      "api_key": "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY",
+      "owner": "DevOps Lead",
+      "classification": "SECRET"
+    },
+    {
+      "id": 9003,
+      "service": "Employee SSN Directory Dump",
+      "records_count": 450,
+      "sample_ssn": "000-12-3456",
+      "classification": "SECRET"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: ai_security_backend
+    ports:
+      - "8000:8000"
+    environment:
+      - DEMO_MODE=true
+      - LLM_PROVIDER=demo
+      - DATABASE_URL=sqlite:////app/security_platform.db
+      - SECRET_KEY=super-secret-security-platform-key-2026
+    volumes:
+      - ./demo_data:/app/demo_data
+      - ./reports:/app/reports
+      - backend_db:/app
+    restart: always
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: ai_security_frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    restart: always
+
+volumes:
+  backend_db:

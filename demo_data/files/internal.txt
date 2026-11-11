@@ -1,0 +1,15 @@
+=============================================
+INTERNAL OPERATIONS & ARCHITECTURE MANUAL
+=============================================
+Classification: INTERNAL
+Author: Security Operations Team
+
+Internal Server Endpoints:
+- Primary DB: internal-db.prod.internal:5432
+- Admin Service: admin-service.prod.internal:8080
+- Internal Status API: /api/v1/internal/status
+
+Internal Standard Operating Procedures:
+1. All AI agents must run with least privilege permissions.
+2. Tools executing raw SQL queries must be audited.
+3. System prompts must enforce prompt-boundary sanitization.
